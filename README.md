@@ -84,9 +84,10 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
 ### TASK 2 : Form Completion :
 
 ### Input : 
+
 {
-        "text" : "Agent: Good morning! Thank you for reaching out. I'll need to collect some basic details to assist you better. Could you please provide your first and last name? Customer: Hello, my name is Thomas Colopsky. Agent : Thanks you ! May I also ask for your gender? Customer: I'm a man. Agent: Thanks sir ! Now for contact puposes, could you share your email address? Customer: Yes, my email is swisslife123@example.fr. Agent : Great! Do you have a phone number where we can reach you? Customer: yes it's 06 xx yy zz uu. Agent: Thanks for your answer, would you prefer us to contact you by email or phone ? Please contact me by phone. Agent: Understood! Lastly, can you share the reason for your call today? Customer: I'm calling because my internet has been quite buggy recently, could you help me resolving that problem ? Agent: Sure let me redirect you to the technical support, have a nice day ! "
-    }
+    "text" : "Agent: Good morning! Thank you for reaching out. I'll need to collect some basic details to assist you better. Could you please provide your first and last name? Customer: Hello, my name is Thomas Colopsky. Agent : Thanks you ! May I also ask for your gender? Customer: I'm a man. Agent: Thanks sir ! Now for contact puposes, could you share your email address? Customer: Yes, my email is swisslife123@example.fr. Agent : Great! Do you have a phone number where we can reach you? Customer: yes it's 06 xx yy zz uu. Agent: Thanks for your answer, would you prefer us to contact you by email or phone ? Please contact me by phone. Agent: Understood! Lastly, can you share the reason for your call today? Customer: I'm calling because my internet has been quite buggy recently, could you help me resolving that problem ? Agent: Sure let me redirect you to the technical support, have a nice day ! "
+}
 
 ### Output : 
 {'personal_info': {'first_name': 'Thomas', 'last_name': 'Colopsky', 'gender': 'Male'}, 'contact_info': {'email': 'swisslife123@example.fr', 'phone': '06 xx yy zz uu', 'preferred_contact_method': 'Phone', 'call_reasons': ['internet has been quite buggy recently']}}
