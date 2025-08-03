@@ -1,6 +1,7 @@
 import json
 import requests
 
+#Test text classification endpoint
 def test_text_classification():
     payload = {
         "text": "I am calling because I have a problem with my internet connection",
@@ -41,6 +42,7 @@ def test_text_classification():
     response = requests.post('http://127.0.0.1:8000/text-classification', json=payload)
     return response.json()
 
+#Test form completion endpoint
 def test_form_completion():
     payload = {
         "text": "Agent: Good morning! Thank you for reaching out. I'll need to collect some basic details to assist you better. Could you please provide your first and last name? Customer: Sure! My name is John Doe. Agent: Thank you, John. May I also ask for your gender? Customer: I'd prefer not to share that at the moment. Agent: No problem at all. Now, for contact purposes, could you share your email address? Customer: Yes, my email is johndoe@example.com. Agent: Great! Do you have a phone number where we can reach you? Customer: I'd rather not provide that right now. Agent: That's completely fine. How would you prefer us to contact you—by email or phone? Customer: Please contact me via Email. Agent: Understood! Lastly, can you share the reason for your call today? Customer: I'm not ready to specify that just yet. Agent: That's okay, John! I've noted everything down. If you need any further assistance, feel free to reach out. Have a great day!"
@@ -52,9 +54,11 @@ def test_form_completion():
     response = requests.post('http://127.0.0.1:8000/form-completion', json=payload)
     return response.json()
 
+#Test text classification endpoint with probabilities
 def test_text_classification_with_probas():
 
-    n_run_test = 2
+    #Number of runs for the test, /!\ the more runs, the more time it takes to run the test + the more requests are made to the model (which is not free)
+    n_run_test = 25
 
     payload = {
         "text": "I'm calling because I have questions about a recent change in my billing and my internet has been quite unstable recently",
@@ -77,6 +81,7 @@ def test_text_classification_with_probas():
     response = requests.post(f'http://127.0.0.1:8000/text-classification_ci?n_runs={n_run_test}', json=payload)
     return response.json()
 
+#Test generalized form completion endpoint
 def test_generalized_form_completion():
 
     schema_dict = {
@@ -125,6 +130,7 @@ def test_generalized_form_completion():
     response = requests.post('http://127.0.0.1:8000/form-completion-generalized', json=payload)
     return response.json()
 
+#Test streamed form completion endpoint
 def test_streamed_form_completion():
 
     schema_dict = {
@@ -170,10 +176,12 @@ def test_streamed_form_completion():
         "form_schema": json.dumps(schema_dict)
     }
     
+    #Since we are streaming the results, we are iterating over the lines and printing the results
     with requests.post('http://127.0.0.1:8000/form-completion-streamed', json=payload, stream=True) as r:
         for line in r.iter_lines():
             if line:
                 try:
+                    print('\n', 'BONUS 3 : ', '\n')
                     parsed = json.loads(line.decode())
                     print("Partial Results")
                     for partial in parsed["partials"]:
@@ -185,22 +193,19 @@ def test_streamed_form_completion():
 
                 except Exception as e:
                     print('error :', e)
-        
     
-
 if __name__ == "__main__":
    
-    # classified_text_json = test_text_classification()
-    # print(classified_text_json, '\n')
+    classified_text_json = test_text_classification()
+    print("TASK 1 : ", classified_text_json, '\n')
     
-    # form_json = test_form_completion()
-    # print(form_json, '\n')
+    form_json = test_form_completion()
+    print("TASK 2 : ", form_json, '\n')
 
-    # classified_text_json_with_probas = test_text_classification_with_probas()
-    # print(classified_text_json_with_probas, '\n')
+    classified_text_json_with_probas = test_text_classification_with_probas()
+    print("BONUS 1 : ", classified_text_json_with_probas, '\n')
 
-    # generalized_form_json = test_generalized_form_completion()
-    # print(generalized_form_json)
+    generalized_form_json = test_generalized_form_completion()
+    print("BONUS 2 : ", generalized_form_json)
 
     streamed_form_json = test_streamed_form_completion()
-    print(streamed_form_json)

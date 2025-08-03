@@ -9,6 +9,8 @@ class ClassificationResult_ci {
 }
 
 function TextClassification_ci(text: string, themes: Theme_ci[]) -> ClassificationResult_ci {
+
+  // Here I use the same model as the one used for the text classification, but with a different temperature
   client LlamaNebiusCI
   prompt #"
     {# 
