@@ -59,7 +59,8 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
 
 ### TASK 1 : Text Classification :
 
-**Input** :   {
+### Input :   
+{
         "text": "I am calling because I want to get my money back !!!",
         "themes": [
             {
@@ -77,19 +78,22 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
         ]
     }
 
-**Ouput** : {'model_reasoning': 'The customer is using imperative language and expressing a strong desire to receive a refund, indicating a clear intent to resolve a financial issue.', 'chosen_theme': {'title': 'Refund', 'description': 'The customer is calling for a refund'}}
+### Output : 
+{'model_reasoning': 'The customer is using imperative language and expressing a strong desire to receive a refund, indicating a clear intent to resolve a financial issue.', 'chosen_theme': {'title': 'Refund', 'description': 'The customer is calling for a refund'}}
 
 ### TASK 2 : Form Completion :
 
-**Input** : {
+### Input : {
         "text" : "Agent: Good morning! Thank you for reaching out. I'll need to collect some basic details to assist you better. Could you please provide your first and last name? Customer: Hello, my name is Thomas Colopsky. Agent : Thanks you ! May I also ask for your gender? Customer: I'm a man. Agent: Thanks sir ! Now for contact puposes, could you share your email address? Customer: Yes, my email is swisslife123@example.fr. Agent : Great! Do you have a phone number where we can reach you? Customer: yes it's 06 xx yy zz uu. Agent: Thanks for your answer, would you prefer us to contact you by email or phone ? Please contact me by phone. Agent: Understood! Lastly, can you share the reason for your call today? Customer: I'm calling because my internet has been quite buggy recently, could you help me resolving that problem ? Agent: Sure let me redirect you to the technical support, have a nice day ! "
     }
 
-**Output** : {'personal_info': {'first_name': 'Thomas', 'last_name': 'Colopsky', 'gender': 'Male'}, 'contact_info': {'email': 'swisslife123@example.fr', 'phone': '06 xx yy zz uu', 'preferred_contact_method': 'Phone', 'call_reasons': ['internet has been quite buggy recently']}}
+### Output : 
+{'personal_info': {'first_name': 'Thomas', 'last_name': 'Colopsky', 'gender': 'Male'}, 'contact_info': {'email': 'swisslife123@example.fr', 'phone': '06 xx yy zz uu', 'preferred_contact_method': 'Phone', 'call_reasons': ['internet has been quite buggy recently']}}
 
 ### BONUS 1 : Text Classification with probabilities : 
 
-**Input** : {
+### Input : 
+{
         "text": "I'm calling because I have questions about a recent change in my billing and my internet has been quite unstable recently",
         "themes": [
             {
@@ -107,11 +111,13 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
         ]
     }
 
-**Output** : {'probabilities': {'Technical support': '20.0%', 'Billing': '80.0%', 'Refund': '0.0%'}, 'chosen_theme': {'title': 'Billing', 'description': 'The customer is calling for billing issues'}, 'n_runs': 25} 
+### Output : 
+{'probabilities': {'Technical support': '20.0%', 'Billing': '80.0%', 'Refund': '0.0%'}, 'chosen_theme': {'title': 'Billing', 'description': 'The customer is calling for billing issues'}, 'n_runs': 25} 
 
 ### BONUS2 : Form Completition Generalized 
 
-**Input**     schema_dict = {
+### Input     
+schema_dict = {
     "title": "Customer Information Form",
     "type": "object",
     "properties": {
@@ -154,7 +160,7 @@ payload = {
     "form_schema": json.dumps(schema_dict)
 }
 
-**Output**
+### Output
 {
   "personal_info": {
     "first_name": "John",
@@ -172,7 +178,8 @@ payload = {
 
 ### BONUS 3: Streamed Form Completion
 
-**Input**      schema_dict = {
+### Input     
+ schema_dict = {
     "title": "Customer Information Form",
     "type": "object",
     "properties": {
@@ -215,7 +222,7 @@ payload = {
     "form_schema": json.dumps(schema_dict)
 }
 
-**Output** 
+### Output
 ""
 "{"
 
