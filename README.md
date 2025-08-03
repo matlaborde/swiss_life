@@ -5,11 +5,15 @@
 This project implements an API with several use cases, the 2 main use cases are :
 
 1. **Text Classification** - CLassify customer texts into given themes
+
 2. **Form Completion** - Extract structured information from conversations between customers and assistants
 
 There are also 3 implemented variants (Which are called Bonuses in test statement) :
+
 1. **Probabilistic text classification** - Text classification use case + probabilities for each themes
+
 2. **Generalized Form Completion** - Form completion but final form can adapts to any given schema
+
 3. ** Streamed Form Completion** - Form completion with real time streaming responses
 
 ## Main fonctions : 
