@@ -92,6 +92,8 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
 ### Output : 
 {'model_reasoning': 'The customer is using imperative language and expressing a strong desire to receive a refund, indicating a clear intent to resolve a financial issue.', 'chosen_theme': {'title': 'Refund', 'description': 'The customer is calling for a refund'}}
 
+---
+
 ### TASK 2 : Form Completion :
 
 ### Input : 
@@ -102,6 +104,8 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
 
 ### Output : 
 {'personal_info': {'first_name': 'Thomas', 'last_name': 'Colopsky', 'gender': 'Male'}, 'contact_info': {'email': 'swisslife123@example.fr', 'phone': '06 xx yy zz uu', 'preferred_contact_method': 'Phone', 'call_reasons': ['internet has been quite buggy recently']}}
+
+---
 
 ### BONUS 1 : Text Classification with probabilities : 
 
@@ -126,6 +130,8 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
 
 ### Output : 
 {'probabilities': {'Technical support': '20.0%', 'Billing': '80.0%', 'Refund': '0.0%'}, 'chosen_theme': {'title': 'Billing', 'description': 'The customer is calling for billing issues'}, 'n_runs': 25} 
+
+---
 
 ### BONUS 2 : Form Completition Generalized 
 
@@ -188,6 +194,8 @@ payload = {
     "call_reasons": ["NULL"]
   }
 }
+
+---
 
 ### BONUS 3: Streamed Form Completion
 
