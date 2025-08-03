@@ -13,13 +13,20 @@ There are also 3 implemented variants (Which are called Bonuses in test statemen
 3. ** Streamed Form Completion** - Form completion with real time streaming responses
 
 ## Main fonctions : 
-1. **app.py** - Script where the api routes are designes
+1. **app.py** - Script where the api routes are designed
+
 2. **test_endpoints.py** - Script to test the different endpoints
+
 3. **text_classification.baml** BAML configuration for text classifcation
+
 4. **form_completion.baml** BAML configuration for the form completion, use a predefined schema
+
 5. **text_classification_confident_interval.baml** BAML configuration for text classifcation with probabilities, uses a higher temperature than the text classification model
+
 6. **generalized_form_completion.baml** BAML configuration for the form completion, uses a dynamic schema
+
 7. **streamed_form_completion.baml** BAML configuration for the form completion streamed, the streaming part is in app.py, no difference compared to generalized_form_completion.baml 
+
 8. **clients.baml** BAML configuration for the LLMs models used
 
 ## Quick Start
