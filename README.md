@@ -15,12 +15,12 @@ There are also 3 implemented variants (Which are called Bonuses in test statemen
 ## Main fonctions : 
 1. **app.py** - Script where the api routes are designes
 2. **test_endpoints.py** - Script to test the different endpoints
-3. **text_classification.baml** Setting up he prompt for text classification
-4. ** form_completion.baml**
-5. **text_classification_confident_interval.baml**
-6. **generalized_form_completion.baml**
-7. **streamed_form_completion.baml**
-8. **clients.baml**
+3. **text_classification.baml** BAML configuration for text classifcation
+4. **form_completion.baml** BAML configuration for the form completion, use a predefined schema
+5. **text_classification_confident_interval.baml** BAML configuration for text classifcation with probabilities, uses a higher temperature than the text classification model
+6. **generalized_form_completion.baml** BAML configuration for the form completion, uses a dynamic schema
+7. **streamed_form_completion.baml** BAML configuration for the form completion streamed, the streaming part is in app.py, no difference compared to generalized_form_completion.baml 
+8. **clients.baml** BAML configuration for the LLMs models used
 
 ## Quick Start
 
@@ -46,14 +46,18 @@ uvicorn app:app --reload --host 127.0.0.1 --port 8000
 The endpoints are the following :
 
 Text Classification : "http://127.0.0.1:8000//text-classification"
+
 Form Completion : "http://127.0.0.1:8000/form-completion"
+
 Text Classification with probabilities : "http://127.0.0.1:8000/text-classification_ci"
+
 Form Completion Generalized : "http://127.0.0.1:8000/form-completion-generalized"
+
 Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
 
 ## Results on examples
 
-###TASK 1 : Text Classification :
+### TASK 1 : Text Classification :
 
 **Input** :   {
         "text": "I am calling because I want to get my money back !!!",
@@ -75,7 +79,7 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
 
 **Ouput** : {'model_reasoning': 'The customer is using imperative language and expressing a strong desire to receive a refund, indicating a clear intent to resolve a financial issue.', 'chosen_theme': {'title': 'Refund', 'description': 'The customer is calling for a refund'}}
 
-###TASK 2 : Form Completion :
+### TASK 2 : Form Completion :
 
 **Input** : {
         "text" : "Agent: Good morning! Thank you for reaching out. I'll need to collect some basic details to assist you better. Could you please provide your first and last name? Customer: Hello, my name is Thomas Colopsky. Agent : Thanks you ! May I also ask for your gender? Customer: I'm a man. Agent: Thanks sir ! Now for contact puposes, could you share your email address? Customer: Yes, my email is swisslife123@example.fr. Agent : Great! Do you have a phone number where we can reach you? Customer: yes it's 06 xx yy zz uu. Agent: Thanks for your answer, would you prefer us to contact you by email or phone ? Please contact me by phone. Agent: Understood! Lastly, can you share the reason for your call today? Customer: I'm calling because my internet has been quite buggy recently, could you help me resolving that problem ? Agent: Sure let me redirect you to the technical support, have a nice day ! "
@@ -83,7 +87,7 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
 
 **Output** : {'personal_info': {'first_name': 'Thomas', 'last_name': 'Colopsky', 'gender': 'Male'}, 'contact_info': {'email': 'swisslife123@example.fr', 'phone': '06 xx yy zz uu', 'preferred_contact_method': 'Phone', 'call_reasons': ['internet has been quite buggy recently']}}
 
-###BONUS 1 : Text Classification with probabilities : 
+### BONUS 1 : Text Classification with probabilities : 
 
 **Input** : {
         "text": "I'm calling because I have questions about a recent change in my billing and my internet has been quite unstable recently",
@@ -105,7 +109,7 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
 
 **Output** : {'probabilities': {'Technical support': '20.0%', 'Billing': '80.0%', 'Refund': '0.0%'}, 'chosen_theme': {'title': 'Billing', 'description': 'The customer is calling for billing issues'}, 'n_runs': 25} 
 
-##BONUS2 : Form Completition Generalized 
+### BONUS2 : Form Completition Generalized 
 
 **Input**     schema_dict = {
     "title": "Customer Information Form",
@@ -166,7 +170,7 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
   }
 }
 
-##BONUS 3: Streamed Form Completion
+### BONUS 3: Streamed Form Completion
 
 **Input**      schema_dict = {
     "title": "Customer Information Form",
