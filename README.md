@@ -116,7 +116,7 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
 ### Output : 
 {'probabilities': {'Technical support': '20.0%', 'Billing': '80.0%', 'Refund': '0.0%'}, 'chosen_theme': {'title': 'Billing', 'description': 'The customer is calling for billing issues'}, 'n_runs': 25} 
 
-### BONUS2 : Form Completition Generalized 
+### BONUS 2 : Form Completition Generalized 
 
 ### Input     
 schema_dict = {
