@@ -149,10 +149,10 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
     "required": ["personal_info", "contact_info"]
     }
 
-    payload = {
-        "text": "Agent: Good morning! Thank you for reaching out. I'll need to collect some basic details to assist you better. Could you please provide your first and last name? Customer: Sure! My name is John Doe and I'm 48 years old. Agent: Thank you, John. May I also ask for your gender? Customer: I'd prefer not to share that at the moment. Agent: No problem at all. Now, for contact purposes, could you share your email address? Customer: Yes, my email is johndoe@example.com. Agent: Great! Do you have a phone number where we can reach you? Customer: I'd rather not provide that right now. Agent: That's completely fine. How would you prefer us to contact you—by email or phone? Customer: Please contact me via Email. Agent: Understood! Lastly, can you share the reason for your call today? Customer: I'm not ready to specify that just yet but I'm down to talk about it either on the 30 of december or the 3rd january 2025. Agent: That's okay, John! I've noted everything down. If you need any further assistance, feel free to reach out. Have a great day!",
-        "form_schema": json.dumps(schema_dict)
-    }
+payload = {
+    "text": "Agent: Good morning! Thank you for reaching out. I'll need to collect some basic details to assist you better. Could you please provide your first and last name? Customer: Sure! My name is John Doe and I'm 48 years old. Agent: Thank you, John. May I also ask for your gender? Customer: I'd prefer not to share that at the moment. Agent: No problem at all. Now, for contact purposes, could you share your email address? Customer: Yes, my email is johndoe@example.com. Agent: Great! Do you have a phone number where we can reach you? Customer: I'd rather not provide that right now. Agent: That's completely fine. How would you prefer us to contact you—by email or phone? Customer: Please contact me via Email. Agent: Understood! Lastly, can you share the reason for your call today? Customer: I'm not ready to specify that just yet but I'm down to talk about it either on the 30 of december or the 3rd january 2025. Agent: That's okay, John! I've noted everything down. If you need any further assistance, feel free to reach out. Have a great day!",
+    "form_schema": json.dumps(schema_dict)
+}
 
 **Output**
 {
@@ -210,95 +210,176 @@ Form Completion Streamed : "http://127.0.0.1:8000/form-completion-streamed"
     "required": ["personal_info", "contact_info"]
     }
 
-    payload = {
-        "text": "Agent: Good morning! Thank you for reaching out. I'll need to collect some basic details to assist you better. Could you please provide your first and last name? Customer: Sure! My name is John Doe and I'm 48 years old. Agent: Thank you, John. May I also ask for your gender? Customer: I'd prefer not to share that at the moment. Agent: No problem at all. Now, for contact purposes, could you share your email address? Customer: Yes, my email is johndoe@example.com. Agent: Great! Do you have a phone number where we can reach you? Customer: I'd rather not provide that right now. Agent: That's completely fine. How would you prefer us to contact you—by email or phone? Customer: Please contact me via Email. Agent: Understood! Lastly, can you share the reason for your call today? Customer: I'm not ready to specify that just yet but I'm down to talk about it either on the 30 of december or the 3rd january 2025. Agent: That's okay, John! I've noted everything down. If you need any further assistance, feel free to reach out. Have a great day!",
-        "form_schema": json.dumps(schema_dict)
-    }
+payload = {
+    "text": "Agent: Good morning! Thank you for reaching out. I'll need to collect some basic details to assist you better. Could you please provide your first and last name? Customer: Sure! My name is John Doe and I'm 48 years old. Agent: Thank you, John. May I also ask for your gender? Customer: I'd prefer not to share that at the moment. Agent: No problem at all. Now, for contact purposes, could you share your email address? Customer: Yes, my email is johndoe@example.com. Agent: Great! Do you have a phone number where we can reach you? Customer: I'd rather not provide that right now. Agent: That's completely fine. How would you prefer us to contact you—by email or phone? Customer: Please contact me via Email. Agent: Understood! Lastly, can you share the reason for your call today? Customer: I'm not ready to specify that just yet but I'm down to talk about it either on the 30 of december or the 3rd january 2025. Agent: That's okay, John! I've noted everything down. If you need any further assistance, feel free to reach out. Have a great day!",
+    "form_schema": json.dumps(schema_dict)
+}
 
 **Output** 
 ""
 "{"
+
 "{ "
+
 "{ personal"
+
 "{ personal_info"
+
 "{ personal_info:"
+
 "{ personal_info: {"
+
 "{ personal_info: {  "
+
 "{ personal_info: {  first"
+
 "{ personal_info: {  first_name"
-"{ personal_info: {  first_name:"
+
+
 "{ personal_info: {  first_name: "
+
 "{ personal_info: {  first_name: John"
+
 "{ personal_info: {  first_name: John,"
+
 "{ personal_info: {  first_name: John,  "
+
 "{ personal_info: {  first_name: John,  age"
+
 "{ personal_info: {  first_name: John,  age:"
+
 "{ personal_info: {  first_name: John,  age: "
+
 "{ personal_info: {  first_name: John,  age: 48"
+
 "{ personal_info: {  first_name: John,  age: 48,"
+
 "{ personal_info: {  first_name: John,  age: 48,  "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender:"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL },"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info:"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email:"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: j"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: joh"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johnd"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone:"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability:"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 202"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method:"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  "
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reason"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reasons"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reasons:"
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reasons: ["
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reasons: [NULL"
-"{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reasons: [NULL]"        
-"{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reasons: [NULL] "       
-"{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reasons: [NULL] }"      
+
+"{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reasons: [NULL]"  
+
+"{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reasons: [NULL] " 
+
+"{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reasons: [NULL] }"  
+
 "{ personal_info: {  first_name: John,  age: 48,  gender: NULL }, contact_info: {  email: johndoe@example.com,  phone: NULL,  availability: 30th December or 3rd January 2025,  preferred_contact_method: Email,  call_reasons: [NULL] }}"     
 
 Final Result
