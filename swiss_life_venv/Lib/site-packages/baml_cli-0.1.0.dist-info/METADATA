@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: baml-cli
+Version: 0.1.0
+Summary: The BAML CLI, distributed in Python
+Author: Boundary
+Author-email: contact@boundaryml.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: baml_py (>=0.1.0)
